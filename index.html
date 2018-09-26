@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega 4 & Vega-Lite 2 (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+</head>
+<body>
+
+<div id="vis1"></div>
+<div id="vis2"></div>
+
+<script type="text/javascript">
+  var spec = "https://raw.githubusercontent.com/aakash4169/Vega/master/barchart.vg.json";
+  vegaEmbed('#vis1', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+	  var spec = "https://raw.githubusercontent.com/aakash4169/Vega/master/chloropleth.vg.json";
+  vegaEmbed('#vis2', spec).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  </script>
+</body>
+</html>
